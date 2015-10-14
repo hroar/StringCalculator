@@ -21,4 +21,9 @@ public class StringCalculatorTest
 		assertEquals(StringCalculator.add("3"),3);
 		assertEquals(StringCalculator.add("23"),23);
 	}
+	@Test
+	public void testTwoNumbers()
+	{
+		assertEquals(StringCalculator.add("1,2"),3);
+	}
 }
