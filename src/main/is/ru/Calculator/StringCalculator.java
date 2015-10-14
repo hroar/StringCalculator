@@ -3,5 +3,11 @@ package is.ru.Calculator;
 public class StringCalculator
 {
 	public static int add(String text)
-	{return 0;}
+	{
+		if (text.isEmpty())
+			return 0;
+		else
+			return Integer.parseInt(text); // Ath! hvað þetta gerir
+
+	}
 }
