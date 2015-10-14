@@ -26,4 +26,9 @@ public class StringCalculatorTest
 	{
 		assertEquals(StringCalculator.add("1,2"),3);
 	}
+	@Test
+	public void testMultipleNumbers()
+	{
+		assertEquals(StringCalculator.add("1,2,3"),6);
+	}
 }
