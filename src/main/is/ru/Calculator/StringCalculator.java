@@ -1,21 +1,28 @@
 package is.ru.Calculator;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class StringCalculator
 {
 	public static int add(String text)
 	{
 		if (text.isEmpty())
 			return 0;
-		else if(text.contains(","))
+
+		Stream<String> numbers = Arrays.stream(text.split(",|\n"));
+		return numbers.mapToInt(Integer::parseInt).sum();
+
+		/*else if(text.contains(","))
 		{
 			return sum(splitNumbers(text));
 		}
 		else
 			return Integer.parseInt(text); // This method is used to get the primitive data type of a certain String
-
+		*/
 	}
 
-	private static int toInt(String number){ //Copied from Hap GitHub
+	/*private static int toInt(String number){ //Copied from Hap GitHub
 		return Integer.parseInt(number);
 	}
 
@@ -29,5 +36,5 @@ public class StringCalculator
 		    total += toInt(number);
 		}
 		return total;
-    }
+    }*/
 }
