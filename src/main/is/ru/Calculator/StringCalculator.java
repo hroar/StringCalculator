@@ -10,19 +10,17 @@ public class StringCalculator
 		{
 			return sum(splitNumbers(text));
 		}
-			
-			
 		else
 			return Integer.parseInt(text); // This method is used to get the primitive data type of a certain String
 
 	}
 
-	private static int toInt(String number){
+	private static int toInt(String number){ //Copied from Hap GitHub
 		return Integer.parseInt(number);
 	}
 
 	private static String[] splitNumbers(String numbers){
-	    return numbers.split(",");
+	    return numbers.split(",|\n");
 	}
       
     private static int sum(String[] numbers){
