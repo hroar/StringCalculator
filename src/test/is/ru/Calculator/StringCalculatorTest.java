@@ -23,11 +23,12 @@ public class StringCalculatorTest
 		assertEquals(StringCalculator.add("23"),23);
 	}
 
-	/*@Test
+	@Test
 	public void testTwoNumbers()
 	{
 		assertEquals(StringCalculator.add("1,2"),3);
 	}
+	
 	/*@Test
 	public void testMultipleNumbers()
 	{
