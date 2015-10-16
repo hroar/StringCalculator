@@ -7,15 +7,13 @@ public class StringCalculator
 	{
 		if(text.isEmpty())
 			return 0;
-		
-		String[] numbers = text.split(",|\n");
-		if(text.contains(","))
-		{
+		String delimiter = ",|\n";
+		if(text.startsWith("//"))
+			delimiter += "|" + text.substring(2, 3);
+		if(text.startsWith("//"))
+			text = text.substring(4);
+		String[] numbers = text.split(delimiter);
 			return sumArray(numbers);
-		}
-		else
-			return toInt(text);
-
 	}
 
 	private static int toInt(String numbers)
