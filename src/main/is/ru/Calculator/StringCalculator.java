@@ -8,7 +8,7 @@ public class StringCalculator
 		if(text.isEmpty())
 			return 0;
 		else
-			return 3;
+			return Integer.parseInt(text);
 			
 	}
 				

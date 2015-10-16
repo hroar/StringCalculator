@@ -20,7 +20,7 @@ public class StringCalculatorTest
 	public void testOneNumber()
 	{
 		assertEquals(StringCalculator.add("3"),3);
-		/*assertEquals(StringCalculator.add("23"),23);*/
+		assertEquals(StringCalculator.add("23"),23);
 	}
 
 	/*@Test
