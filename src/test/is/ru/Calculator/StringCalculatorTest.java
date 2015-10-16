@@ -43,6 +43,6 @@ public class StringCalculatorTest
 	/*@Test
 	public void testDifferentDelimiter()
 	{
-		assertEquals(StringCalculator.add("//;\n1;2"),3);
+		assertEquals(StringCalculator.add("//;1;2"),3);
 	}*/
 }	
