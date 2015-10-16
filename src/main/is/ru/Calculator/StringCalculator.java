@@ -10,9 +10,7 @@ public class StringCalculator
 		
 		if(text.contains(","))
 		{
-			String[] numbers = text.split(",");
-			
-			return sum(numbers);
+			return sum(splitNumbers(text));
 		}
 		else
 			return Integer.parseInt(text);
@@ -31,6 +29,11 @@ public class StringCalculator
 			total += toInt(number);
 		}
 		return total;
+	}
+
+	private static String[] splitNumbers(String numbers)
+	{
+		return numbers.split(",");
 	}
 				
 }															
