@@ -8,9 +8,10 @@ public class StringCalculator
 		if(text.isEmpty())
 			return 0;
 		
+		String[] numbers = text.split(",|\n");
 		if(text.contains(","))
 		{
-			return sumArray(splitNumbers(text));
+			return sumArray(numbers);
 		}
 		else
 			return toInt(text);
@@ -32,9 +33,9 @@ public class StringCalculator
 		return total;
 	}
 
-	private static String[] splitNumbers(String numbers)
+	/*private static String[] splitNumbers(String numbers)
 	{
 		String delimiter = ",|\n";
 		return numbers.split(delimiter);
-	}
+	}*/
 }															
