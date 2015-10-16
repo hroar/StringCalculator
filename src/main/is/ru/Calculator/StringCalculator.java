@@ -10,16 +10,21 @@ public class StringCalculator
 		
 		if(text.contains(","))
 		{
-			String[] temp = text.split(",");
-			return toInt(temp[0]) + toInt(temp[1]); 
+			String[] numbers = text.split(",");
+			int total = 0;
+			for(String number : numbers)
+			{
+				total += toInt(number);
+			}
+			return total;
 		}
 		else
 			return Integer.parseInt(text);
 	}
 
-	private static int toInt(String temp)
+	private static int toInt(String numbers)
 	{
-		return Integer.parseInt(temp);
+		return Integer.parseInt(numbers);
 	}
 				
 }															
