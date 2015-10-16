@@ -15,12 +15,14 @@ public class StringCalculatorTest
 	{
 		assertEquals(StringCalculator.add(""),0);
 	}
-	/*@Test
+	
+	@Test
 	public void testOneNumber()
 	{
 		assertEquals(StringCalculator.add("3"),3);
-		assertEquals(StringCalculator.add("23"),23);
+		/*assertEquals(StringCalculator.add("23"),23);*/
 	}
+
 	/*@Test
 	public void testTwoNumbers()
 	{
