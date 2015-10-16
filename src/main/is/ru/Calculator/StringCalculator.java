@@ -10,7 +10,7 @@ public class StringCalculator
 		
 		if(text.contains(","))
 		{
-			return sum(text.split(",|\n"));
+			return sum(splitNumbers(text));
 		}
 		else
 			return toInt(text);
@@ -31,9 +31,9 @@ public class StringCalculator
 		return total;
 	}
 
-	/*private static String[] splitNumbers(String numbers)
+	private static String[] splitNumbers(String numbers)
 	{
-		return numbers.split(",");
-	}*/
+		return numbers.split(",|\n");
+	}
 				
 }															
