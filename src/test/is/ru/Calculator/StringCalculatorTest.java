@@ -59,5 +59,10 @@ public class StringCalculatorTest
 			assertEquals("-1,-2,-3", e.getMessage());
 		}
 	}
-
+	
+	/*@Test
+	public void testIfNumberisBiggerThan1000()
+	{
+		assertEquals(StringCalculator.add("10,10,1000"),20);
+	}*/
 }	

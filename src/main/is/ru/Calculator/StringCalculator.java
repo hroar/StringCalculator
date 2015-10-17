@@ -51,6 +51,10 @@ public class StringCalculator
 		int total = 0;
 		for(String number : numbers)
 		{
+			if(toInt(number) > 1000)
+			{
+				continue;
+			}
 			total += toInt(number);
 		}
 		return total;
