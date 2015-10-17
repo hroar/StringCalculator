@@ -9,10 +9,14 @@ public class StringCalculator
 		{
 			return 0;
 		}
-		
 		String delimiter = delimiter(text);
-		String values = extracted(text);
-			return sumArray(values.split(delimiter));
+		String numbers = numbers(text);
+			return sumArray(values(text));
+	}
+	
+	private static String[] values(String text)
+	{
+		return numbers(text).split(delimiter(text));
 	}
 	private static String delimiter(String text)
 	{
@@ -21,18 +25,18 @@ public class StringCalculator
 			delimiter = text.substring(2,3);
 		return delimiter;
 	}
-	private static String extracted(String text)
+	private static String numbers(String text)
 	{
 		String values = text;
 		if(text.startsWith("//"))
 			values = text.substring(3);
 		return values;
 	}
-	private static String[] numbers(String text)
+	/*private static String[] numbers(String text)
 	{
 		String[] numbers = text.split(",|\n");
 		return numbers;
-	}
+	}*/
 	private static int toInt(String numbers)
 	{
 		return Integer.parseInt(numbers);
