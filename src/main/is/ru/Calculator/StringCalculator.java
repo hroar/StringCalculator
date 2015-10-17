@@ -32,14 +32,13 @@ public class StringCalculator
 			values = text.substring(3);
 		return values;
 	}
-	/*private static String[] numbers(String text)
-	{
-		String[] numbers = text.split(",|\n");
-		return numbers;
-	}*/
+	
 	private static int toInt(String numbers)
 	{
-		return Integer.parseInt(numbers);
+		Integer number = Integer.parseInt(numbers);
+		if(number < 0)
+			throw new RuntimeException(numbers);
+		return number;
 	}
 
 	private static int sumArray(String[] numbers)

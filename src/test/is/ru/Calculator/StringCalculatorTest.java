@@ -47,5 +47,15 @@ public class StringCalculatorTest
 		assertEquals(StringCalculator.add("//;1;2;3"),6);
 	}
 
-	
+	@Test
+	public void testNegativeNotAllowed()
+	{
+		try{
+			StringCalculator.add("-1");
+		}
+		catch (Exception e)
+		{
+			assertEquals("-1", e.getMessage());
+		}
+	}
 }	
