@@ -35,11 +35,11 @@ public class StringCalculatorTest
 		assertEquals(StringCalculator.add("1,2,3"),6);
 	}
 
-	/*@Test 
+	@Test 
 	public void testNewlineBetweenNumbersWithComma()
 	{
 		assertEquals(StringCalculator.add("1\n2,3"),6);
-	}*/
+	}
 	
 	/*@Test
 	public void testDifferentDelimiter()
