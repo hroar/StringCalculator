@@ -59,6 +59,7 @@ public class StringCalculatorTest
 			assertEquals("-1,-2,-3", e.getMessage());
 		}
 	}
+	
 	/*@Test
 	public void testMultipleDelimiters()
 	{
