@@ -6,16 +6,20 @@ public class StringCalculator
 	public static int add(String text)
 	{
 		if(text.isEmpty())
+		{
 			return 0;
-		String delimiter = ",|\n";
-		if(text.startsWith("//"))
-			delimiter += "|" + text.substring(2, 3);
-		if(text.startsWith("//"))
-			text = text.substring(4);
-		String[] numbers = text.split(delimiter);
+		}
+		String[] numbers = text.split(delimiter(text));
 			return sumArray(numbers);
 	}
-
+	private static String delimiter(String text)
+	{
+		String delimiter = ",|\n";
+		if(text.startsWith("//"))
+			delimiter = text.substring(2,3);
+		return delimiter;
+	}
+	
 	private static int toInt(String numbers)
 	{
 		return Integer.parseInt(numbers);
