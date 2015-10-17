@@ -33,6 +33,7 @@ public class StringCalculatorTest
 	public void testMultipleNumbers()
 	{
 		assertEquals(StringCalculator.add("1,2,3"),6);
+		assertEquals(StringCalculator.add("1,2,3,4,5,6,7,8,9"),45);
 	}
 
 	@Test 
@@ -51,11 +52,12 @@ public class StringCalculatorTest
 	public void testNegativeNotAllowed()
 	{
 		try{
-			StringCalculator.add("-1");
+			StringCalculator.add("-1,2,-2,3,-3");
 		}
 		catch (Exception e)
 		{
-			assertEquals("-1", e.getMessage());
+			assertEquals("-1,-2,-3", e.getMessage());
 		}
 	}
+
 }	

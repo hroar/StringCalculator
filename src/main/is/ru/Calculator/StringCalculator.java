@@ -35,14 +35,19 @@ public class StringCalculator
 	
 	private static int toInt(String numbers)
 	{
-		Integer number = Integer.parseInt(numbers);
-		if(number < 0)
-			throw new RuntimeException(numbers);
-		return number;
+		return Integer.parseInt(numbers);
 	}
 
 	private static int sumArray(String[] numbers)
 	{
+		String negative = "";
+		for(String number : numbers)
+		{
+			if(toInt(number)< 0)
+				negative += "," + number;
+		}
+		if(negative.length()>0)
+			throw new RuntimeException(negative.substring(1));
 		int total = 0;
 		for(String number : numbers)
 		{
@@ -50,10 +55,4 @@ public class StringCalculator
 		}
 		return total;
 	}
-
-	/*private static String[] splitNumbers(String numbers)
-	{
-		String delimiter = ",|\n";
-		return numbers.split(delimiter);
-	}*/
 }															
