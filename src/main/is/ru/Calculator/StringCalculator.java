@@ -9,17 +9,27 @@ public class StringCalculator
 		{
 			return 0;
 		}
-		String[] numbers = text.split(delimiter(text));
-			return sumArray(numbers);
+		
+		String delimiter = ",|\n";
+		if(text.startsWith("//"))
+			delimiter = text.substring(2,3);
+		String values = text;
+		if(text.startsWith("//"))
+			values = text.substring(3);
+			return sumArray(values.split(delimiter));
 	}
-	private static String delimiter(String text)
+	/*private static String delimiter(String text)
 	{
 		String delimiter = ",|\n";
 		if(text.startsWith("//"))
 			delimiter = text.substring(2,3);
 		return delimiter;
+	}*/
+	private String[] numbers(String text)
+	{
+		String[] numbers = text.split(",|\n");
+		return numbers;
 	}
-	
 	private static int toInt(String numbers)
 	{
 		return Integer.parseInt(numbers);
