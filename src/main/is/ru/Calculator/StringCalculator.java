@@ -10,22 +10,25 @@ public class StringCalculator
 			return 0;
 		}
 		
-		String delimiter = ",|\n";
-		if(text.startsWith("//"))
-			delimiter = text.substring(2,3);
-		String values = text;
-		if(text.startsWith("//"))
-			values = text.substring(3);
+		String delimiter = delimiter(text);
+		String values = extracted(text);
 			return sumArray(values.split(delimiter));
 	}
-	/*private static String delimiter(String text)
+	private static String delimiter(String text)
 	{
 		String delimiter = ",|\n";
 		if(text.startsWith("//"))
 			delimiter = text.substring(2,3);
 		return delimiter;
-	}*/
-	private String[] numbers(String text)
+	}
+	private static String extracted(String text)
+	{
+		String values = text;
+		if(text.startsWith("//"))
+			values = text.substring(3);
+		return values;
+	}
+	private static String[] numbers(String text)
 	{
 		String[] numbers = text.split(",|\n");
 		return numbers;
